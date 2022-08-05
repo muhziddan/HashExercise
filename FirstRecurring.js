@@ -1,3 +1,18 @@
+/*
+Question:
+Given an array, return the first recurring character
+
+example:
+[1,4,7,6,4]
+return 4
+
+[7,2,5,5,2,9,7]
+return 5
+
+[1,2,3,4]
+return undefined/nul/etc
+*/
+
 function firstRecurring(input) {// time O(n^2) space O(1) -> cannot handle first recurring inside
     for (let i = 0; i < input.length; i++) {
         for (let j = i + 1; j < input.length; j++) {
