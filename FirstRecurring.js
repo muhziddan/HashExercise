@@ -54,12 +54,25 @@ function firstRecurring2(input) { // time O(n), space O(n)
     return undefined
 }
 
+function firstRecurring4(input) { // time O(n), space O(n)
+    const set = new Set()
+    for (let i = 0; i < input.length; i++) {
+        // console.log(set)
+        if (set.has(input[i])) {
+            return input[i]
+        } else {
+            set.add(input[i])
+        }
+    }
+    return undefined
+}
+
 console.log(firstRecurring3([1, 2, 2, 1, 5]))
 console.log(firstRecurring3([1, 5, 3, 4, 1, 3]))
 console.log(firstRecurring3([1, 2, 3, 3, 1]))
 console.log("")
-console.log("")
-// console.log(firstRecurring2([1, 2, 2, 1, 5]))
+console.log(firstRecurring2([1, 2, 2, 1, 5]))
 console.log(firstRecurring2([1, 5, 3, 4, 1, 3]))
+console.log(firstRecurring4([1, 2, 2, 1, 5]))
 
 // node FirstRecurring.js
